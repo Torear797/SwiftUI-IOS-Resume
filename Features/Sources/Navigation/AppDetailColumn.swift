@@ -5,7 +5,9 @@
 //  Created by Артём Клыч on 19.03.2024.
 //
 
+import Devices
 import Films
+import Store
 import SwiftUI
 import NavigationAPI
 
@@ -18,8 +20,6 @@ public struct AppDetailColumn: View {
     // MARK: Variables
     
     private var screen: AppScreen?
-    
-    // MARK: EnvironmentObject
     
     // MARK: Init
     
@@ -38,9 +38,9 @@ public struct AppDetailColumn: View {
         case .films:
             FilmsList(animation: filmDetailAnimation)
         case .devices:
-            Text("sf")
+            DeviceCategoriesList()
         case .store:
-            Text("sf")
+            StoreView()
         }
     }
     

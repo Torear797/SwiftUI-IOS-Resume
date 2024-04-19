@@ -14,6 +14,7 @@ let package = Package(
         .library(name: "FilmsAPI", targets: ["FilmsAPI"]),
         .library(name: "Navigation", targets: ["Navigation"]),
         .library(name: "NavigationAPI", targets: ["NavigationAPI"]),
+        .library(name: "Store", targets: ["Store"]),
         .library(name: "WebDataSource", targets: ["WebDataSource"]),
         .library(name: "WebDataSourceAPI", targets: ["WebDataSourceAPI"]),
     ],
@@ -49,12 +50,23 @@ let package = Package(
                 "NavigationAPI",
                 "Films",
                 "Devices",
+                "Store",
             ],
             resources: [.process("Resources")]
         ),
         .target(
             name: "NavigationAPI",
             dependencies: [.product(name: "CFFoundation", package: "Core")],
+            resources: [.process("Resources")]
+        ),
+        .target(
+            name: "Store",
+            dependencies: [
+                .product(name: "CFFoundation", package: "Core"),
+                .product(name: "DesignSystem", package: "Core"),
+                .product(name: "UserDefaultManagerAPI", package: "Core"),
+                "DevicesAPI"
+            ],
             resources: [.process("Resources")]
         ),
         .target(

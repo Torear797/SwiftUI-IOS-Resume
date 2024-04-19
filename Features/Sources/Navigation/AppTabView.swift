@@ -7,6 +7,7 @@
 
 import Devices
 import Films
+import Store
 import SwiftUI
 import NavigationAPI
 
@@ -48,7 +49,7 @@ public struct AppTabView: View {
         case .devices:
            DeviceCategoriesList()
         case .store:
-            Text("sf")
+            StoreView()
         }
     }
     

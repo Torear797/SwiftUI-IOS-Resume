@@ -6,8 +6,6 @@
 //
 
 import DependencyInjection
-import Devices
-import DevicesAPI
 import NavigationAPI
 import Films
 import FilmsAPI

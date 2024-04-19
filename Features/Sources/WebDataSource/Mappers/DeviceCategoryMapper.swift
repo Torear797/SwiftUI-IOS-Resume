@@ -18,7 +18,7 @@ final class DeviceCategoryMapper: Mapper {
     
     func map(to inputData: InputType) -> OutputType? {
         var categories: [DeviceCategory] = []
-        var inputData = inputData.compactMap({ deviceMapper.map(to: $0) })
+        let inputData = inputData.compactMap({ deviceMapper.map(to: $0) })
         
         let iPhones = inputData
             .filter({ $0.type == .iPhone })
@@ -26,6 +26,7 @@ final class DeviceCategoryMapper: Mapper {
         
         if !iPhones.isEmpty, let first = iPhones.first {
             categories.append(DeviceCategory(
+                id: 0,
                 name: "iPhones",
                 description: "Смартфоны",
                 imageURL: first.image.preview,
@@ -39,6 +40,7 @@ final class DeviceCategoryMapper: Mapper {
         
         if !iPads.isEmpty, let first = iPads.first {
             categories.append(DeviceCategory(
+                id: 1,
                 name: "iPads",
                 description: "Планшеты",
                 imageURL: first.image.preview,
@@ -52,6 +54,7 @@ final class DeviceCategoryMapper: Mapper {
         
         if !watch.isEmpty, let first = watch.first {
             categories.append(DeviceCategory(
+                id: 2,
                 name: "Watch",
                 description: "Часы",
                 imageURL: first.image.preview,

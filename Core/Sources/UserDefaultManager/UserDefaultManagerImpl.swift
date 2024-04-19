@@ -49,6 +49,10 @@ public final class UserDefaultManagerImpl: UserDefaultManager {
         userDefaults.integer(forKey: key.rawValue)
     }
     
+    public func getFloatValue(forKey key: Keys) -> Float {
+        userDefaults.float(forKey: key.rawValue)
+    }
+    
     public func getDataValue(forKey key: Keys) -> Data? {
         userDefaults.data(forKey: key.rawValue)
     }
