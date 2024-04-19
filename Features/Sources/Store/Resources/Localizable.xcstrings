@@ -1,0 +1,45 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%lld RUB" : {
+
+    },
+    "Device Type" : {
+
+    },
+    "Store" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Магазин"
+          }
+        }
+      }
+    },
+    "Top up your balance in your personal account" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пополните свой баланс в личном кабинете"
+          }
+        }
+      }
+    },
+    "You don't have enough money to buy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "У вас недостаточно средств для покупки"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
