@@ -14,7 +14,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Torear797/SwiftUI-IOS-Resume">
-    <img src="SwiftUI-IOS-Resume/Common/Resources/Assets.xcassets/AppIcon.appiconset/appstore.png" alt="Logo" width="80" height="80">
+    <img src="SwiftUI-IOS-Resume/Assets.xcassets/AppIcon.appiconset/appstore.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">SwiftUI IOS Resume</h3>
