@@ -1,5 +1,5 @@
 //
-//  DeviceAPIRouter.swift
+//  UserAPIRouter.swift
 //
 //
 //  Created by Артём Клыч on 19.04.2024.
@@ -9,11 +9,11 @@ import Alamofire
 import Foundation
 import HTTPClientAPI
 
-public enum DeviceAPIRouter: URLRequestConvertible {
-    case getAppleDevices
+public enum UserAPIRouter: URLRequestConvertible {
+    case getUser
 }
 
-public extension DeviceAPIRouter {
+public extension UserAPIRouter {
     func asURLRequest() throws -> URLRequest {
         let url = try BackendConfig.baseURL.asURL()
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
@@ -30,8 +30,8 @@ public extension DeviceAPIRouter {
     
     private var path: String {
         switch self {
-        case .getAppleDevices:
-            "devices/apple/devicesList.json"
+        case .getUser:
+            "getUser.json"
         }
     }
     
@@ -43,7 +43,7 @@ public extension DeviceAPIRouter {
         into request: URLRequest
     ) throws -> URLRequest {
         switch self {
-        case .getAppleDevices:
+        case .getUser:
             request
         }
     }

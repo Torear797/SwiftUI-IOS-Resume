@@ -7,6 +7,7 @@
 
 import DesignSystem
 import SwiftUI
+import Profile
 
 public struct DeviceCategoriesList: View {
     
@@ -24,8 +25,15 @@ public struct DeviceCategoriesList: View {
         NavigationView {
             mainView
                 .navigationTitle(LocalizationManager.categories)
+                .toolbar { avatarToolbarItem }
         }
         .navigationViewStyle(.stack)
+    }
+    
+    private var avatarToolbarItem: some ToolbarContent {
+        ToolbarItemGroup(placement: .primaryAction) {
+           AvatarToolBarItem()
+        }
     }
     
     private var mainView: some View {

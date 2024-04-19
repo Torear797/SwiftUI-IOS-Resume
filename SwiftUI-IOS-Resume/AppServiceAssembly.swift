@@ -10,6 +10,7 @@ import Devices
 import HTTPClient
 import HTTPClientAPI
 import Films
+import Profile
 import Swinject
 import UserDefaultManager
 import UserDefaultManagerAPI
@@ -22,6 +23,7 @@ final class AppServiceAssembly: Assembly {
         WebDataSourceAssembly(),
         FilmsServiceAssembly(),
         DevicesServiceAssembly(),
+        ProfileServiceAssembly(),
     ]
     
     func assemble(container: Container = Container()) {

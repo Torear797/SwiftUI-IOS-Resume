@@ -5,6 +5,7 @@
 //  Created by Артём Клыч on 19.04.2024.
 //
 
+import Profile
 import SwiftUI
 
 public struct StoreView: View {
@@ -24,9 +25,18 @@ public struct StoreView: View {
             mainView
                 .navigationTitle(LocalizationManager.store)
                 .searchable(text: $viewModel.searchText)
-                .toolbar { bottomToolbarItem }
+                .toolbar { 
+                    bottomToolbarItem
+                    avatarToolbarItem
+                }
         }
         .navigationViewStyle(.stack)
+    }
+    
+    private var avatarToolbarItem: some ToolbarContent {
+        ToolbarItemGroup(placement: .primaryAction) {
+           AvatarToolBarItem()
+        }
     }
     
     private var bottomToolbarItem: some ToolbarContent {
