@@ -6,6 +6,8 @@
 //
 
 import DependencyInjection
+import Devices
+import DevicesAPI
 import NavigationAPI
 import Films
 import FilmsAPI
@@ -27,9 +29,7 @@ public struct AppNavigation: View {
     
     // MARK: Init
     
-    public init() {
-
-    }
+    public init() {}
 
     public var body: some View {
         Group {
@@ -56,13 +56,6 @@ public struct AppNavigation: View {
                 }
             }
         }
-//        .environmentObject(eventChainListViewModel)
-//        .environmentObject(eventChainRouter)
-//        .environmentObject(eventListViewModel)
-//        .environmentObject(eventDiaryRouter)
-//        .environmentObject(profileViewModel)
-//        .environmentObject(profileRouter)
-
         .onReceive(filmViewer.filmPublisher) { film in
             let isPresent = film != nil
             guard isCompleteFilmAnimation || !isPresent else { return }

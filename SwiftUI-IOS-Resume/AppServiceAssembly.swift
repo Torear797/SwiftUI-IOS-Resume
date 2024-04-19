@@ -6,6 +6,7 @@
 //
 
 import DependencyInjection
+import Devices
 import HTTPClient
 import HTTPClientAPI
 import Films
@@ -19,7 +20,8 @@ final class AppServiceAssembly: Assembly {
     
     private let serviceAssebly: [Assembly] = [
         WebDataSourceAssembly(),
-        FilmsServiceAssembly()
+        FilmsServiceAssembly(),
+        DevicesServiceAssembly(),
     ]
     
     func assemble(container: Container = Container()) {

@@ -8,6 +8,8 @@ let package = Package(
     defaultLocalization: "en",
     platforms: [.iOS(.v15), .macOS(.v12)],
     products: [
+        .library(name: "Devices", targets: ["Devices"]),
+        .library(name: "DevicesAPI", targets: ["DevicesAPI"]),
         .library(name: "Films", targets: ["Films"]),
         .library(name: "FilmsAPI", targets: ["FilmsAPI"]),
         .library(name: "Navigation", targets: ["Navigation"]),
@@ -30,10 +32,23 @@ let package = Package(
             dependencies: [.product(name: "CFFoundation", package: "Core")]
         ),
         .target(
+            name: "Devices",
+            dependencies: [
+                .product(name: "DesignSystem", package: "Core"),
+                "DevicesAPI",
+            ],
+            resources: [.process("Resources")]
+        ),
+        .target(
+            name: "DevicesAPI",
+            dependencies: [.product(name: "CFFoundation", package: "Core")]
+        ),
+        .target(
             name: "Navigation",
             dependencies: [
                 "NavigationAPI",
                 "Films",
+                "Devices",
             ],
             resources: [.process("Resources")]
         ),
@@ -53,7 +68,8 @@ let package = Package(
             name: "WebDataSourceAPI",
             dependencies: [
                 .product(name: "HTTPClientAPI", package: "Core"),
-                "FilmsAPI"
+                "FilmsAPI",
+                "DevicesAPI",
             ]
         ),
     ]

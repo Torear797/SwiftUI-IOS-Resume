@@ -5,6 +5,7 @@
 //  Created by Артём Клыч on 13.02.2024.
 //
 
+import Devices
 import Films
 import SwiftUI
 import NavigationAPI
@@ -22,17 +23,6 @@ public struct AppTabView: View {
     // MARK: State
     
     @State private var tappedTwice = false
-    
-    // MARK: EnvironmentObject
-        
-//    @EnvironmentObject var eventChainListViewModel: EventChainList.ViewModel
-//    @EnvironmentObject var eventChainRouter: EventChainsRouter
-//    
-//    @EnvironmentObject var eventListViewModel: EventList.ViewModel
-//    @EnvironmentObject var eventDiaryRouter: EventDiaryRouter
-//    
-//    @EnvironmentObject var profileViewModel: ProfileView.ViewModel
-//    @EnvironmentObject var profileRouter: ProfileRouter
     
     // MARK: Computed Property
     
@@ -56,33 +46,11 @@ public struct AppTabView: View {
         case .films:
             FilmsList(animation: filmDetailAnimation)
         case .devices:
-           Text("sf")
+           DeviceCategoriesList()
         case .store:
             Text("sf")
         }
     }
-    
-//    private var router: any Router {
-//        switch clearSelection {
-//        case .eventChains:
-//            eventChainRouter
-//        case .eventDiary:
-//            eventDiaryRouter
-//        case .more:
-//            profileRouter
-//        }
-//    }
-    
-//    private var tabViewModel: any RootViewModel {
-//        switch clearSelection {
-//        case .eventChains:
-//            eventChainListViewModel
-//        case .eventDiary:
-//            eventListViewModel
-//        case .more:
-//            profileViewModel
-//        }
-//    }
     
     // MARK: Init
     
@@ -103,23 +71,6 @@ public struct AppTabView: View {
                     destination
                         .tag(screen as AppScreen?)
                         .tabItem { screen.label }
-//                        .onChange(of: tappedTwice) { isTapped in
-//                            guard isTapped else { return }
-//                            guard selection == screen as AppScreen?
-//                            else { return }
-//                            
-//                            if router.canPopToRoot {
-//                                router.popToRoot()
-//                            } else {
-//                                withAnimation {
-//                                    proxy.scrollTo(
-//                                        tabViewModel.topViewID,
-//                                        anchor: .top
-//                                    )
-//                                    tappedTwice = false
-//                                }
-//                            }
-//                        }
                 }
             }
         }

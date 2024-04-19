@@ -16,6 +16,7 @@
 		B6FB857A2BD157ED00F6D8C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FB85792BD157ED00F6D8C2 /* Assets.xcassets */; };
 		B6FB857C2BD15CDC00F6D8C2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B6FB857B2BD15CDC00F6D8C2 /* Localizable.xcstrings */; };
 		B6FB857E2BD1607C00F6D8C2 /* Films in Frameworks */ = {isa = PBXBuildFile; productRef = B6FB857D2BD1607C00F6D8C2 /* Films */; };
+		B6FB85802BD25F7300F6D8C2 /* Devices in Frameworks */ = {isa = PBXBuildFile; productRef = B6FB857F2BD25F7300F6D8C2 /* Devices */; };
 		B6FFEF852A2DBC0B008A223C /* SwiftUI_IOS_ResumeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFEF842A2DBC0B008A223C /* SwiftUI_IOS_ResumeApp.swift */; };
 		B6FFEF872A2DBC0B008A223C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFEF862A2DBC0B008A223C /* ContentView.swift */; };
 		B6FFF00C2A2DBD12008A223C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FFF00B2A2DBD12008A223C /* Launch Screen.storyboard */; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6FB85802BD25F7300F6D8C2 /* Devices in Frameworks */,
 				B6FB857E2BD1607C00F6D8C2 /* Films in Frameworks */,
 				B6FB85742BD155DA00F6D8C2 /* HTTPClient in Frameworks */,
 				B6FB856E2BD154DA00F6D8C2 /* Navigation in Frameworks */,
@@ -115,6 +117,7 @@
 				B6FB85752BD155E500F6D8C2 /* UserDefaultManager */,
 				B6FB85772BD155F500F6D8C2 /* WebDataSource */,
 				B6FB857D2BD1607C00F6D8C2 /* Films */,
+				B6FB857F2BD25F7300F6D8C2 /* Devices */,
 			);
 			productName = "SwiftUI-IOS-Resume";
 			productReference = B6FFEF812A2DBC0B008A223C /* SwiftUI-IOS-Resume.app */;
@@ -438,6 +441,10 @@
 		B6FB857D2BD1607C00F6D8C2 /* Films */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Films;
+		};
+		B6FB857F2BD25F7300F6D8C2 /* Devices */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Devices;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -15,12 +15,20 @@ public final class WebDataSourceAssembly: Assembly {
     
     public func assemble(container: Container) {
         registerFilmsWebDataSource(container)
+        registerDevicesWebDataSource(container)
     }
     
     private func registerFilmsWebDataSource(_ container: Container) {
         container.register(FilmsWebDataSource.self) { r in
             let httpClient = r.resolve(HTTPClient.self)!
             return FilmsWebDataSourceImpl(httpClient: httpClient)
+        }
+    }
+    
+    private func registerDevicesWebDataSource(_ container: Container) {
+        container.register(DevicesWebDataSource.self) { r in
+            let httpClient = r.resolve(HTTPClient.self)!
+            return DevicesWebDataSourceImpl(httpClient: httpClient)
         }
     }
 }
